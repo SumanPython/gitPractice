@@ -18,4 +18,8 @@ jobs:
             - name: validate index.html
               run: tidy -q -e index.html
               
-              
+    project-info:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Display project message
+          run: echo "This is a sample project for HTML validation using GitHub Actions"    
