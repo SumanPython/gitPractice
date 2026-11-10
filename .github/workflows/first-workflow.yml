@@ -19,6 +19,7 @@ jobs:
               run: tidy -q -e index.html
               
     project-info:
+      needs: validate-html
       runs-on: ubuntu-latest
       steps:
         - name: Display project message
