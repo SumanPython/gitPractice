@@ -26,6 +26,18 @@ jobs:
             - name: validate index.html
               run: tidy -q -e index.html
 
+            - name: check github secret
+              env:
+                PRACTICE_SECRET: ${{ secrets.MY_SECRET }}
+              run: |
+                if [ -n "$PRACTICE_SECRET" ]; then
+                 echo "Secret is available"
+                
+                else
+                echo "Secret is missing"
+                exit 1
+                fi
+
             - name: create report
               run: echo "HTML Validation Successful" > report.txt
 
