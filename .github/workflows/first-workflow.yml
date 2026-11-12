@@ -40,4 +40,6 @@ jobs:
           uses: actions/download-artifact@v4
           with:
             name: html-report
-            path: report.txt
+            path: .
+        - name: read report content
+          run: cat report.txt
