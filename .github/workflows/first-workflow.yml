@@ -31,11 +31,10 @@ jobs:
                 PRACTICE_SECRET: ${{ secrets.MY_SECRET }}
               run: |
                 if [ -n "$PRACTICE_SECRET" ]; then
-                 echo "Secret is available"
-                
+                 echo "Secret is available" 
                 else
-                echo "Secret is missing"
-                exit 1
+                 echo "Secret is missing"
+                 exit 1
                 fi
 
             - name: create report
