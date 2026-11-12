@@ -1,7 +1,12 @@
 name: HTML Validation
 on: 
     push:
+      branches:
+        - login
+
     pull_request:
+      branches:
+        - master
        
 
 jobs:
