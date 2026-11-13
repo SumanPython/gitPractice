@@ -26,6 +26,12 @@ jobs:
             - name: validate index.html
               run: tidy -q -e index.html
 
+            - name: Run basic tests
+              run: |
+                test -f index.html
+                grep -qi "<title>" index.html
+                echo "Basic tests passed"
+
             - name: check github secret
               env:
                 PRACTICE_SECRET: ${{ secrets.MY_SECRET }}
