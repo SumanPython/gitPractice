@@ -28,7 +28,7 @@ jobs:
 
             - name: Run basic tests
               run: |
-                test -f missing.html
+                test -f index.html
                 grep -qi "<title>" index.html
                 echo "Basic tests passed"
 
